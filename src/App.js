@@ -1,10 +1,10 @@
 import NavBar from "./components/NavBar";
 
 function App() {
+  const actualMonth = new Date().getMonth() + 1;
   return (
     <main className="contaner">
-      <NavBar actualMonth={"Noviembre"} darkMode={"noche"} lang={"es"}/>
-
+      <NavBar initialMonth={actualMonth} darkMode={"noche"} lang={"es"}/>
     </main>
   );
 }

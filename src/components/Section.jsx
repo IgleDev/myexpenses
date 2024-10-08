@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { CircularProgressbar } from 'react-circular-progressbar';
 import '../assets/styles/circular.css';
 import { useTranslation } from "react-i18next"; 
+import SectionInfo from "./SectionInfo";
 
 const Section = () => {
     const { t } = useTranslation();
@@ -31,11 +32,12 @@ const Section = () => {
 
     return (
         <section>
-            <article className="shadow-stone-700 w-80 bg-slate-600">
+            <article className="shadow-stone-700 w-80 bg-white dark:bg-gray-700">
                 <h1 className="text-center font-bold text-2xl text-white">{t("TitleStast")}</h1>
                 <div className="w-[200px] h-[200px] my-10 mx-auto">
                     <CircularProgressbar value={value} text={text}/>
                 </div>
+            <SectionInfo />
             </article>
         </section>
     )
